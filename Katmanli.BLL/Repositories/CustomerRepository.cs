@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Katmanli.BLL.Repositories
 {
-    class CustomerRepository : IRepository<Customer>
+    public class CustomerRepository : IRepository<Customer>
     {
         NorthwindEntities db = new NorthwindEntities();
         public void Delete(int itemId)

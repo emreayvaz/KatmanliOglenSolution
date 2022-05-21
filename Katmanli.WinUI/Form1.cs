@@ -1,5 +1,6 @@
 ﻿using Katmanli.BLL.Repositories;
 using Katmanli.DAL;
+using Katmanli.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -64,7 +65,7 @@ namespace Katmanli.WinUI
                 MessageBox.Show("KUTULARI DOLDURUNUZ");
                 return;
             }
-            cr.Insert(new Category
+            cr.Insert(new CategoryDTO
             {
                 CategoryName = textBox1.Text,
                 Description= textBox2.Text

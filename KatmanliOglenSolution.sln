@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Katmanli.BLL", "Katmanli.BL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Katmanli.WinUI", "Katmanli.WinUI\Katmanli.WinUI.csproj", "{5497836C-2B1C-408C-AD48-B158FE300E00}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Katmanli.DTO", "Katmanli.DTO\Katmanli.DTO.csproj", "{50F3D4D9-864D-4661-8B28-6BDAB50805FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{5497836C-2B1C-408C-AD48-B158FE300E00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5497836C-2B1C-408C-AD48-B158FE300E00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5497836C-2B1C-408C-AD48-B158FE300E00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50F3D4D9-864D-4661-8B28-6BDAB50805FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50F3D4D9-864D-4661-8B28-6BDAB50805FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50F3D4D9-864D-4661-8B28-6BDAB50805FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50F3D4D9-864D-4661-8B28-6BDAB50805FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

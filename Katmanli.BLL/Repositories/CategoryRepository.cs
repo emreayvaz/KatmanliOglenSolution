@@ -1,4 +1,5 @@
 ﻿using Katmanli.DAL;
+using Katmanli.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,13 +11,14 @@ namespace Katmanli.BLL.Repositories
     public class CategoryRepository
     {
         NorthwindEntities db = new NorthwindEntities();
-        public void Insert(Category item)       //Category gelmiyorsa Katmanli.DAL'ı referans vermeyi unutmuşsundur.
+        public void Insert(CategoryDTO item)       //Category gelmiyorsa Katmanli.DAL'ı referans vermeyi unutmuşsundur.
         {
-            db.Categories.Add(item);
+            Category c = new Category { CategoryName = item.CategoryName, Description = item.Description };
+            db.Categories.Add(c);
             db.SaveChanges();
         }
 
-        public void Update(Category item)
+        public void Update(CategoryDTO item)
         {
             Category updated = db.Categories.Find(item.CategoryID);
             db.Entry(updated).CurrentValues.SetValues(item);

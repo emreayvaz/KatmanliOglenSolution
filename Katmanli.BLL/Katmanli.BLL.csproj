@@ -67,6 +67,10 @@
       <Project>{103a88c8-4208-4700-a08e-52b4b3e1a787}</Project>
       <Name>Katmanli.DAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Katmanli.DTO\Katmanli.DTO.csproj">
+      <Project>{50F3D4D9-864D-4661-8B28-6BDAB50805FD}</Project>
+      <Name>Katmanli.DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
