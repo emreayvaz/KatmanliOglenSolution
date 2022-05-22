@@ -32,14 +32,30 @@ namespace Katmanli.BLL.Repositories
             db.SaveChanges();
         }
 
-        public List<Category> GetAll() 
+        public List<CategoryDTO> GetAll() 
         {
-            return db.Categories.ToList();
+            List<Category> c = new List<Category>();
+            c = db.Categories.ToList();
+            List<CategoryDTO> cDTOList = new List<CategoryDTO>();
+            foreach (var item in c)
+            {
+                cDTOList.Add(new CategoryDTO { CategoryID=item.CategoryID,CategoryName=item.CategoryName,Description=item.Description });
+            }
+            return cDTOList;
         } 
 
-        public Category Get(int itemId)
+        public CategoryDTO Get(int itemId)
         {
-            return db.Categories.Find(itemId);
+            CategoryDTO cDTO = new CategoryDTO();
+            List<Category> c = new List<Category>();
+            c.Add(db.Categories.Find(itemId));
+            foreach (var item in c)
+            {
+                cDTO.CategoryID = item.CategoryID;
+                cDTO.CategoryName = item.CategoryName;
+                cDTO.Description = item.Description;
+            }
+            return cDTO;
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Katmanli.BLL.IRepository;
 using Katmanli.DAL;
+using Katmanli.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;

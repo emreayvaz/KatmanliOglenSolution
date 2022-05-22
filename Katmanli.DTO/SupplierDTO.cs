@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Katmanli.DTO
 {
-    public class CustomerDTO
+    public class SupplierDTO
     {
-        public string CustomerID { get; set; }
+        public int SupplierID { get; set; }
         public string CompanyName { get; set; }
         public string ContactName { get; set; }
         public string ContactTitle { get; set; }
@@ -19,5 +19,6 @@ namespace Katmanli.DTO
         public string Country { get; set; }
         public string Phone { get; set; }
         public string Fax { get; set; }
+        public string HomePage { get; set; }
     }
 }

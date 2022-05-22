@@ -1,5 +1,4 @@
 ﻿using Katmanli.BLL.Repositories;
-using Katmanli.DAL;
 using Katmanli.DTO;
 using System;
 using System.Collections.Generic;
@@ -42,7 +41,7 @@ namespace Katmanli.WinUI
         private void button4_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(textBox3.Text);
-            List<Category> c = new List<Category>();
+            List<CategoryDTO> c = new List<CategoryDTO>();
             c.Add(cr.Get(id));
             dataGridView1.DataSource = c;
             
@@ -87,26 +86,26 @@ namespace Katmanli.WinUI
             }
         }
 
-        Category guncellenecek;
+        //Category guncellenecek;
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count>0)
-            {
-                int id =Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
-                guncellenecek = cr.Get(id);
-                textBox1.Text = guncellenecek.CategoryName;
-                textBox2.Text = guncellenecek.Description;
-            }
+            //if (dataGridView1.SelectedRows.Count>0)
+            //{
+            //    int id =Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
+            //    guncellenecek = cr.Get(id);
+            //    textBox1.Text = guncellenecek.CategoryName;
+            //    textBox2.Text = guncellenecek.Description;
+            //}
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            guncellenecek.CategoryName = textBox1.Text;
-            guncellenecek.Description = textBox2.Text;
-            cr.Update(guncellenecek);
-            Temizle();
-            KategorileriGetir();
+            //guncellenecek.CategoryName = textBox1.Text;
+            //guncellenecek.Description = textBox2.Text;
+            //cr.Update(guncellenecek);
+            //Temizle();
+            //KategorileriGetir();
         }
     }
 }
